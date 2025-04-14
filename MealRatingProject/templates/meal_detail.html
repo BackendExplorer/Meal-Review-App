@@ -9,75 +9,155 @@
 <body class="bg-gray-50 text-gray-800 min-h-screen">
 
 <!-- 共通ヘッダー・ナビゲーション -->
-<header class="bg-blue-600 text-white shadow-md">
-    <nav class="container mx-auto flex items-center space-x-4 py-4 px-4">
-        <a href="{% url 'landing' %}" class="px-4 py-2 font-semibold hover:bg-blue-700 rounded transition-colors">Home</a>
-        <a href="{% url 'category_list' 1 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Morning Meals</a>
-        <a href="{% url 'category_list' 2 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Afternoon Meals</a>
-        <a href="{% url 'category_list' 3 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Evening Meals</a>
-        <a href="{% url 'category_list' 4 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Recently Rated</a>
-        <a href="{% url 'category_list' 5 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Top Rated</a>
-    </nav>
-</header>
-
-<main class="container mx-auto py-8">
-    <!-- Meal名 -->
-    <h2 class="text-2xl font-bold mb-6 text-center">{{ meal.name }}</h2>
-
-    <!-- メイン情報部分 -->
-    <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 max-w-2xl mx-auto flex flex-col md:flex-row gap-6">
-        <img
-            src="{{ meal.imageUrl }}"
-            alt="{{ meal.name }}"
-            class="w-full md:w-1/2 h-64 object-cover rounded-md"
+<header class="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-md w-full sticky top-0 z-50">
+    <nav class="flex justify-center w-full">
+      <div class="flex flex-wrap justify-center space-x-4 px-4 py-4">
+        <a
+          href="{% url 'landing' %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
         >
-        <div class="md:w-1/2">
-            <p class="mb-2">
-                <strong class="font-semibold">Country of origin:</strong> {{ meal.countryOfOrigin }}
-            </p>
-            <p class="mb-2">
-                <strong class="font-semibold">Description:</strong> {{ meal.description }}
-            </p>
-            <p class="mb-2">
-                <strong class="font-semibold">Avg Score:</strong> {{ meal.avgRating }}
-            </p>
-            <p class="mb-2">
-                <strong class="font-semibold">Votes:</strong> {{ meal.numberOfVotes }}
-            </p>
-        </div>
+          Home
+        </a>
+  
+        <a
+          href="{% url 'category_list' 1 %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+        >
+          Morning Meals
+        </a>
+  
+        <a
+          href="{% url 'category_list' 2 %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+        >
+          Afternoon Meals
+        </a>
+  
+        <a
+          href="{% url 'category_list' 3 %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+        >
+          Evening Meals
+        </a>
+  
+        <a
+          href="{% url 'category_list' 4 %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+        >
+          Recently Rated
+        </a>
+  
+        <a
+          href="{% url 'category_list' 5 %}"
+          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                 border border-blue-400/70 text-white bg-blue-600
+                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+        >
+          Top Rated
+        </a>
+      </div>
+    </nav>
+  </header>
+        
+<main class="container mx-auto py-8">
+    <!-- Meal名をよりモダンに -->
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-center mb-8 leading-tight tracking-wider drop-shadow-xl">
+      {{ meal.name }}
+    </h2>
+  
+    <!-- メイン情報部分（カード風） -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-2xl p-8 max-w-3xl mx-auto flex flex-col md:flex-row gap-8">
+      <img
+        src="{{ meal.imageUrl }}"
+        alt="{{ meal.name }}"
+        class="w-full md:w-1/2 h-72 object-cover rounded-xl"
+      >
+      <div class="md:w-1/2 space-y-6">
+        <p class="text-base sm:text-lg text-gray-700 leading-snug tracking-wide">
+          <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500">
+            Country of Origin:
+          </span> {{ meal.countryOfOrigin }}
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 leading-snug tracking-wide">
+          <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500">
+            Description:
+          </span> {{ meal.description }}
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 leading-snug tracking-wide">
+          <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500">
+            Avg Score:
+          </span> {{ meal.avgRating }}
+        </p>
+        <p class="text-base sm:text-lg text-gray-700 leading-snug tracking-wide">
+          <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500">
+            Votes:
+          </span> {{ meal.numberOfVotes }}
+        </p>
+      </div>
     </div>
-
+  
     <!-- レーティングフォーム -->
-    <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 max-w-2xl mx-auto mt-8">
-        <h3 class="text-lg font-semibold mb-4">Your rating:</h3>
-        <form action="{% url 'rate_meal' meal.id %}" method="POST" class="flex items-center space-x-4">
-            {% csrf_token %}
-            <input
-                type="range"
-                min="0"
-                max="5"
-                step="0.1"
-                name="rating"
-                id="rating"
-                value="3.0"
-                oninput="ratingOutput.value = rating.value"
-                class="w-full"
-            >
-            <output
-                name="ratingOutput"
-                id="ratingOutput"
-                class="font-semibold w-12 text-center"
-            >
-                3.0
-            </output>
-            <button
-                type="submit"
-                class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
-            >
-                Submit
-            </button>
-        </form>
+    <div class="bg-white border border-gray-300 rounded-lg shadow-xl p-8 max-w-2xl mx-auto mt-8">
+      <form 
+          action="{% url 'rate_meal' meal.id %}" 
+          method="POST" 
+          class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:items-center sm:justify-center sm:space-x-6"
+      >
+          {% csrf_token %}
+          
+          <!-- Rangeのラベル -->
+          <label for="rating" class="block text-sm sm:text-base font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 tracking-wider drop-shadow-sm">
+              Your Rating:
+          </label>
+          
+          <!-- range入力 -->
+          <input
+              type="range"
+              min="0"
+              max="5"
+              step="0.1"
+              name="rating"
+              id="rating"
+              value="3.0"
+              oninput="ratingOutput.value = rating.value"
+              class="w-full sm:w-1/2 appearance-none bg-gray-200 accent-blue-500 h-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
+          >
+          
+          <!-- range入力と連動する出力 -->
+          <output
+              name="ratingOutput"
+              id="ratingOutput"
+              class="font-extrabold w-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 tracking-wider drop-shadow-md"
+          >
+              3.0
+          </output>
+          
+          <!-- 送信ボタン -->
+          <button
+              type="submit"
+              class="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-6 py-2 rounded-md hover:from-blue-600 hover:to-blue-700 transition-colors tracking-wide shadow-md hover:shadow-lg uppercase"
+          >
+              Submit
+          </button>
+      </form>
     </div>
+  
 </main>
 
 </body>
