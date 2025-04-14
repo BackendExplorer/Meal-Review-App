@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ meal.name }}</title>
+    <!-- Tailwind CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+<!-- 共通ヘッダー・ナビゲーション -->
+<header class="bg-blue-600 text-white shadow-md">
+    <nav class="container mx-auto flex items-center space-x-4 py-4 px-4">
+        <a href="{% url 'landing' %}" class="px-4 py-2 font-semibold hover:bg-blue-700 rounded transition-colors">Home</a>
+        <a href="{% url 'category_list' 1 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Morning Meals</a>
+        <a href="{% url 'category_list' 2 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Afternoon Meals</a>
+        <a href="{% url 'category_list' 3 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Evening Meals</a>
+        <a href="{% url 'category_list' 4 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Recently Rated</a>
+        <a href="{% url 'category_list' 5 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Top Rated</a>
+    </nav>
+</header>
+
+<main class="container mx-auto py-8">
+    <!-- Meal名 -->
+    <h2 class="text-2xl font-bold mb-6 text-center">{{ meal.name }}</h2>
+
+    <!-- メイン情報部分 -->
+    <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 max-w-2xl mx-auto flex flex-col md:flex-row gap-6">
+        <img
+            src="{{ meal.imageUrl }}"
+            alt="{{ meal.name }}"
+            class="w-full md:w-1/2 h-64 object-cover rounded-md"
+        >
+        <div class="md:w-1/2">
+            <p class="mb-2">
+                <strong class="font-semibold">Country of origin:</strong> {{ meal.countryOfOrigin }}
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">Description:</strong> {{ meal.description }}
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">Avg Score:</strong> {{ meal.avgRating }}
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">Votes:</strong> {{ meal.numberOfVotes }}
+            </p>
+        </div>
+    </div>
+
+    <!-- レーティングフォーム -->
+    <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 max-w-2xl mx-auto mt-8">
+        <h3 class="text-lg font-semibold mb-4">Your rating:</h3>
+        <form action="{% url 'rate_meal' meal.id %}" method="POST" class="flex items-center space-x-4">
+            {% csrf_token %}
+            <input
+                type="range"
+                min="0"
+                max="5"
+                step="0.1"
+                name="rating"
+                id="rating"
+                value="3.0"
+                oninput="ratingOutput.value = rating.value"
+                class="w-full"
+            >
+            <output
+                name="ratingOutput"
+                id="ratingOutput"
+                class="font-semibold w-12 text-center"
+            >
+                3.0
+            </output>
+            <button
+                type="submit"
+                class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

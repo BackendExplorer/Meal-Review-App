@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Rate Your Favorite Meals</title>
+    <!-- Tailwind CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+<!-- 共通ヘッダー・ナビゲーション -->
+<header class="bg-blue-600 text-white shadow-md">
+    <nav class="container mx-auto flex items-center space-x-4 py-4 px-4">
+        <a href="{% url 'landing' %}" class="px-4 py-2 font-semibold hover:bg-blue-700 rounded transition-colors">Home</a>
+        <a href="{% url 'category_list' 1 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Morning Meals</a>
+        <a href="{% url 'category_list' 2 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Afternoon Meals</a>
+        <a href="{% url 'category_list' 3 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Evening Meals</a>
+        <a href="{% url 'category_list' 4 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Recently Rated</a>
+        <a href="{% url 'category_list' 5 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Top Rated</a>
+    </nav>
+</header>
+
+<main class="container mx-auto py-8">
+
+    <!-- メインタイトル -->
+    <h1 class="text-3xl font-bold mb-10 text-center">Rate Your Favorite Meals</h1>
+
+    <!-- Morning Meals セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6">Morning Meals</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for meal in morning_meals %}
+            <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+                <!-- リンク設定 -->
+                <a href="{% url 'meal_detail' meal.id %}" class="block">
+                    <img
+                        src="{{ meal.imageUrl }}"
+                        alt="{{ meal.name }}"
+                        class="w-full h-48 object-cover mb-2 rounded-md"
+                    >
+                    <p class="font-semibold text-gray-900 mt-2">{{ meal.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Afternoon Meals セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6">Afternoon Meals</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for meal in afternoon_meals %}
+            <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+                <a href="{% url 'meal_detail' meal.id %}" class="block">
+                    <img
+                        src="{{ meal.imageUrl }}"
+                        alt="{{ meal.name }}"
+                        class="w-full h-48 object-cover mb-2 rounded-md"
+                    >
+                    <p class="font-semibold text-gray-900 mt-2">{{ meal.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Evening Meals セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6">Evening Meals</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for meal in evening_meals %}
+            <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+                <a href="{% url 'meal_detail' meal.id %}" class="block">
+                    <img
+                        src="{{ meal.imageUrl }}"
+                        alt="{{ meal.name }}"
+                        class="w-full h-48 object-cover mb-2 rounded-md"
+                    >
+                    <p class="font-semibold text-gray-900 mt-2">{{ meal.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Recently Rated セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6">Recently Rated</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for meal in recently_added %}
+            <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+                <a href="{% url 'meal_detail' meal.id %}" class="block">
+                    <img
+                        src="{{ meal.imageUrl }}"
+                        alt="{{ meal.name }}"
+                        class="w-full h-48 object-cover mb-2 rounded-md"
+                    >
+                    <p class="font-semibold text-gray-900 mt-2">{{ meal.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Top Rated セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6">Top Rated</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for meal in top_rated %}
+            <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+                <a href="{% url 'meal_detail' meal.id %}" class="block">
+                    <img
+                        src="{{ meal.imageUrl }}"
+                        alt="{{ meal.name }}"
+                        class="w-full h-48 object-cover mb-2 rounded-md"
+                    >
+                    <p class="font-semibold text-gray-900 mt-2">{{ meal.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Add a New Meal セクション -->
+    <section class="mb-12">
+        <h2 class="text-xl font-semibold mb-6 text-center">Add a New Meal</h2>
+        <div class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 max-w-lg mx-auto">
+            <form action="{% url 'add_meal' %}" method="POST" class="space-y-4">
+                {% csrf_token %}
+                <div>
+                    <label for="name" class="text-sm font-semibold block mb-1">Name:</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="料理名を入力してください"
+                        required
+                        class="border border-gray-300 rounded w-full p-2"
+                    >
+                </div>
+
+                <div>
+                    <label for="description" class="text-sm font-semibold block mb-1">Description:</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="料理の説明を入力してください"
+                        required
+                        class="border border-gray-300 rounded w-full p-2 h-24"
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label for="imageUrl" class="text-sm font-semibold block mb-1">ImageUrl:</label>
+                    <input
+                        type="url"
+                        id="imageUrl"
+                        name="imageUrl"
+                        placeholder="画像のURLを入力してください"
+                        required
+                        class="border border-gray-300 rounded w-full p-2"
+                    >
+                </div>
+
+                <div>
+                    <label for="countryOfOrigin" class="text-sm font-semibold block mb-1">CountryOfOrigin:</label>
+                    <input
+                        type="text"
+                        id="countryOfOrigin"
+                        name="countryOfOrigin"
+                        placeholder="料理の発祥国を入力してください"
+                        required
+                        class="border border-gray-300 rounded w-full p-2"
+                    >
+                </div>
+
+                <div>
+                    <label for="typicalMealTime" class="text-sm font-semibold block mb-1">TypicalMealTime:</label>
+                    <select
+                        id="typicalMealTime"
+                        name="typicalMealTime"
+                        class="border border-gray-300 rounded w-full p-2"
+                    >
+                        <option value="1">Morning</option>
+                        <option value="2">Afternoon</option>
+                        <option value="3" selected>Evening</option>
+                    </select>
+                </div>
+
+                <div class="text-center">
+                    <button
+                        type="submit"
+                        class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+                    >
+                        作成する
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

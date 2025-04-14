@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal List</title>
+    <!-- Tailwind CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+<!-- 共通ヘッダー・ナビゲーション -->
+<header class="bg-blue-600 text-white shadow-md">
+    <nav class="container mx-auto flex items-center space-x-4 py-4 px-4">
+        <a href="{% url 'landing' %}" class="px-4 py-2 font-semibold hover:bg-blue-700 rounded transition-colors">Home</a>
+        <a href="{% url 'category_list' 1 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Morning Meals</a>
+        <a href="{% url 'category_list' 2 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Afternoon Meals</a>
+        <a href="{% url 'category_list' 3 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Evening Meals</a>
+        <a href="{% url 'category_list' 4 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Recently Rated</a>
+        <a href="{% url 'category_list' 5 %}" class="px-4 py-2 hover:bg-blue-700 rounded transition-colors">Top Rated</a>
+    </nav>
+</header>
+
+<main class="container mx-auto py-8">
+    <!-- カテゴリー名 -->
+    <h2 class="text-2xl font-semibold mb-6 text-center">{{ category_name }} Meals</h2>
+
+    <!-- ソートリンク -->
+    <div class="mb-6 text-center">
+        <span class="font-semibold mr-2">Sort by:</span>
+        <a href="?sort=rating" class="text-blue-600 hover:underline">Rating</a> | 
+        <a href="?sort=country" class="text-blue-600 hover:underline">Country</a> | 
+        <a href="?sort=date" class="text-blue-600 hover:underline">Date</a>
+    </div>
+
+    <!-- Meal一覧表示 -->
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {% for meal in meals %}
+        <li class="bg-white border border-gray-300 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition-transform">
+            <!-- 食べ物のカード全体をリンクに変更 -->
+            <a href="{% url 'meal_detail' meal.id %}" class="block">
+                <img
+                    src="{{ meal.imageUrl }}"
+                    alt="{{ meal.name }}"
+                    class="w-full h-48 object-cover mb-4 rounded-md"
+                >
+                <p class="font-semibold text-xl text-gray-900">{{ meal.name }}</p>
+                <p class="text-gray-600 text-sm mb-2">{{ meal.countryOfOrigin }}</p>
+                <p class="text-gray-800 text-sm">Avg Score: {{ meal.avgRating }}</p>
+                <p class="text-gray-800 text-sm">Votes: {{ meal.numberOfVotes }}</p>
+            </a>
+        </li>
+        {% empty %}
+        <p class="text-gray-600">No meals found.</p>
+        {% endfor %}
+    </ul>
+</main>
+
+</body>
+</html>
