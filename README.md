@@ -1,4 +1,4 @@
-# 🧑‍🍳 Meal-Rating-Django ⭐  
+# 🧑‍🍳 Meal-Rating-Site ⭐  
 
 **食事レビュー＆評価アプリ｜ログイン・投稿・評価付き！**
 
