@@ -1,4 +1,4 @@
-# 🧑‍🍳 Pokemon-Viewer-Golang ⭐  
+# 🧑‍🍳 Meal-Rating-Django ⭐  
 
 ** 食事レビュー＆評価アプリ（Django製）🍴｜ログイン・投稿・評価付き！**
 
