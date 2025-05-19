@@ -189,11 +189,24 @@ python3 manage.py runserver
 
 <br>
 
-### 1. サインアップ
-
-ウェブサイトにアクセスしたら、ユーザー名やメールアドレス、パスワードを登録してログインします。
+### 1. ユーザー登録・ログイン
 
 <br>
 
-<img width="500" alt="スクリーンショット 2025-05-20 5 09 17" src="https://github.com/user-attachments/assets/581f936f-70e1-433f-b8cc-b34aad77120b" />
+<ul>
+  <li>
+    ウェブサイトにアクセスしたらまずユーザー登録をします。
+  </li>
+  <li>
+    すでにアカウントがある場合は「ログイン」からサインインしてください。
+  </li>
+</ul>
+
+
+<br>
+
+
+| ユーザー登録 | ログイン |
+|:-------:|:--------:|
+|<br><img src="https://github.com/user-attachments/assets/581f936f-70e1-433f-b8cc-b34aad77120b" width="100%" /> |<br><img src="https://github.com/user-attachments/assets/66f40d21-972a-44d5-899c-f1d119341a9c" width="100%" /> |
 
