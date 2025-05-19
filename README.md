@@ -218,3 +218,11 @@ python3 manage.py runserver
 <br>
 
 <img width="655" alt="スクリーンショット 2025-05-20 5 35 02" src="https://github.com/user-attachments/assets/4ea9bb03-40b2-4619-9ad2-a6fc13e6df62" />
+
+<br>
+
+### 3. 投稿の作成
+
+<br> 
+
+- あほあほ
