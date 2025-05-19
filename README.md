@@ -1,4 +1,5 @@
-# Meal Rating Site 
+# Meal Review App
+
 
 ![Django](https://img.shields.io/badge/Framework-Django-green)
 ![VirtualEnv](https://img.shields.io/badge/Environment-virtualenv-yellow?logo=python&logoColor=white)
