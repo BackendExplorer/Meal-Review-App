@@ -175,6 +175,8 @@ cd Meal-Rating-App
 python3 manage.py runserver
 ```
 
+### 5. アプリにアクセス
 
+ブラウザで http://127.0.0.1:8000/ を開く。
 
 ---
