@@ -324,3 +324,27 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 ## <a id="追加予定の機能"></a> 🔥 追加予定の機能
 
 <br>
+
+### お気に入り登録機能
+
+<br>
+
+気に入った投稿をブックマークして後から見返せる「お気に入り」機能を実装したいと考えています。
+
+<br>
+
+---
+
+
+---
+## <a id="参考文献"></a>📗 参考文献
+
+<br>
+
+### 公式ドキュメント
+
+- [Python](https://docs.python.org/ja/3/)
+
+- [Django](https://docs.djangoproject.com/ja/stable/)
+
+- [venv](https://docs.python.org/ja/3/library/venv.html)
