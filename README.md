@@ -220,7 +220,7 @@ python3 manage.py runserver
 
 <br> 
 
-https://github.com/user-attachments/assets/3541257d-17dd-4bba-95f5-1c85d1074ac7
+https://github.com/user-attachments/assets/416bc66a-534f-41a2-b22c-548fe2e6cd89
 
 <br>
 
@@ -228,7 +228,7 @@ https://github.com/user-attachments/assets/3541257d-17dd-4bba-95f5-1c85d1074ac7
 
 <br>
 
-https://github.com/user-attachments/assets/6cb1dd35-6b2a-4860-bd59-21818d773dfb
+https://github.com/user-attachments/assets/ec7785bb-bab4-4bcf-bd48-1f4ab6ce7a43
 
 <br>
 
