@@ -239,6 +239,8 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <br>
 
 ```mermaid
+%%{ init: { "theme": "default", "sequence": { "actorMargin": 100, "messageMargin": 50, "mirrorActors": false, "bottomMarginAdj": 2 } } }%%
+
 sequenceDiagram
     participant User as ユーザ
     participant Server as サーバ（Django）
@@ -258,5 +260,4 @@ sequenceDiagram
     Server->>DB: 評価データを保存
     DB-->>Server: 保存結果を返却
     Server-->>User: 評価完了メッセージを返却
-
 ```
