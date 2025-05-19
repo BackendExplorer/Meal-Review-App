@@ -40,7 +40,6 @@ https://github.com/user-attachments/assets/f9f4e9d2-5579-40e8-b307-a562745fbbd4
 
 - [使用技術](#使用技術)
 
-- [クラス構成 と アーキテクチャ](#クラス構成とアーキテクチャ)
 
 <br>
 
@@ -280,3 +279,21 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 | 開発環境         | ![macOS](https://img.shields.io/badge/OS-macOS-lightgrey)&nbsp;&nbsp;&nbsp;&nbsp;![VSCode](https://img.shields.io/badge/Editor-VSCode-blue) |
 | バージョン管理   | ![Git](https://img.shields.io/badge/VersionControl-Git-orange)&nbsp;&nbsp;&nbsp;&nbsp;![GitHub](https://img.shields.io/badge/Repo-GitHub-black) |
 | ドキュメント・図 | ![Mermaid](https://img.shields.io/badge/Diagram-Mermaid-green)&nbsp;&nbsp;&nbsp;&nbsp;![LaTeX](https://img.shields.io/badge/Doc-LaTeX-9cf) |
+
+
+<br>
+
+---
+
+## <a id="設計上のこだわり"></a>🌟 設計上のこだわり
+
+<br>
+
+### シンプルかつ直感的なUI設計
+
+- 初めて訪れるユーザーでも直感的に使えるよう、トップページにレビュー一覧を配置し、投稿や評価操作もワンクリックで完結できる導線を意識しました
+
+### 機能ごとのアプリ分割による保守性向上
+
+- Djangoの各アプリ（例：reviews、accounts）を機能ごとに分割し、見通しの良い構成と拡張性の高い設計を意識しました。
+
