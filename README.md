@@ -1,5 +1,6 @@
 <div style="transform: scale(0.8); transform-origin: top left;">
   <pre class="mermaid">
+    ```mermaid
     sequenceDiagram
         participant User as ユーザ
         participant Server as サーバ（Django）
@@ -19,6 +20,7 @@
         Server->>DB: 評価データを保存
         DB-->>Server: 保存結果を返却
         Server-->>User: 評価完了メッセージを返却
+     ```   
   </pre>
 </div>
 
