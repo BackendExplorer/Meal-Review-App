@@ -1,3 +1,11 @@
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/581f936f-70e1-433f-b8cc-b34aad77120b" width="100%" alt="サインアップフォーム" /></td>
+    <td><img src="https://github.com/user-attachments/assets/66f40d21-972a-44d5-899c-f1d119341a9c" width="100%" alt="ログインフォーム" /></td>
+  </tr>
+</table>
+
+
 # Meal Rating Site 
 
 ![Django](https://img.shields.io/badge/Framework-Django-green)
