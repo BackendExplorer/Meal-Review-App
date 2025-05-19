@@ -143,7 +143,7 @@ https://github.com/user-attachments/assets/f9f4e9d2-5579-40e8-b307-a562745fbbd4
 以下のコマンドをターミナルで実行します
 
 ```bash
-git clone git@github.com:BackendExplorer/Online-Chat.git
+git@github.com:BackendExplorer/Meal-Rating-App.git
 ```
 ```bash
 cd Online-Chat
