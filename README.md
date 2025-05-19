@@ -333,8 +333,6 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 <br>
 
----
-
 
 ---
 ## <a id="参考文献"></a>📗 参考文献
@@ -354,3 +352,22 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 - [venv](https://docs.python.org/ja/3/library/venv.html)
 
   `グローバル環境に影響を与えず、プロジェクト単位でライブラリの導入・管理を可能にするために参照`
+
+
+<br>
+
+---
+
+## <a id="ライセンス情報"></a>📜 ライセンス情報
+
+<br>
+
+<ul>
+  <li>
+    このプロジェクトは <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> のもとで公開されています。<br><br>
+    自由に利用、改変、再配布が可能ですが、利用の際は本ライセンス表記を保持してください。
+  </li>
+</ul>
+
+<br>
+
