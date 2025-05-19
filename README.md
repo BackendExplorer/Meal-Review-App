@@ -216,8 +216,19 @@ python3 manage.py runserver
 
 <br>
 
-### 3. 投稿の作成
+### 3. 投稿の手順
 
 <br> 
 
-- あほあほ
+https://github.com/user-attachments/assets/3541257d-17dd-4bba-95f5-1c85d1074ac7
+
+<br>
+
+### 4. レビューの手順
+
+<br>
+
+https://github.com/user-attachments/assets/6cb1dd35-6b2a-4860-bd59-21818d773dfb
+
+<br>
+
