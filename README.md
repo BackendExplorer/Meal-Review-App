@@ -239,7 +239,7 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <br>
 
 ```mermaid
-%%{init: {'themeVariables': { 'fontSize': '10px', 'actorFontSize': '10px', 'sequenceNumberFontSize': '8px' }}}%%
+%%{init: {'config': {'scale': 0.6}}}%%
 sequenceDiagram
     participant User as ユーザ
     participant Server as サーバ（Django）
