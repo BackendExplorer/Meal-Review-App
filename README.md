@@ -318,3 +318,9 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 - 情報量が多くなりがちな食事レビューを、視覚的にわかりやすく・直感的に評価できるようにするUI設計に試行錯誤しました。
 
 <br>
+
+---
+
+## <a id="追加予定の機能"></a> 🔥 追加予定の機能
+
+<br>
