@@ -345,6 +345,12 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 - [Python](https://docs.python.org/ja/3/)
 
+  `Python`の基本文法を参照
+
 - [Django](https://docs.djangoproject.com/ja/stable/)
 
+  `フレームワーク`としての使い方を参照
+
 - [venv](https://docs.python.org/ja/3/library/venv.html)
+
+  `グローバル環境に影響を与えず、プロジェクト単位でライブラリの導入・管理を可能にするために参照`
