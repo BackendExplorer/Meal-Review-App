@@ -181,4 +181,17 @@ python3 manage.py runserver
 
 ブラウザで http://127.0.0.1:8000/ を開く。
 
+<br>
+
 ---
+
+## <a id="基本的な使い方"></a>🧑‍💻 基本的な使い方
+
+<br>
+
+### 1. サインアップ
+
+ウェブサイトにアクセスしたら、ユーザー名やメールアドレス、パスワードを登録してログインします。
+
+<img width="724" alt="スクリーンショット 2025-05-20 5 09 17" src="https://github.com/user-attachments/assets/581f936f-70e1-433f-b8cc-b34aad77120b" />
+
