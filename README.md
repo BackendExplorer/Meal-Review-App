@@ -120,3 +120,35 @@ https://github.com/user-attachments/assets/f9f4e9d2-5579-40e8-b307-a562745fbbd4
 <br>
 
 ---
+
+## <a id="セットアップ手順"></a> 🚀 セットアップ手順
+
+<br>
+
+### 1. 前提条件
+
+以下を事前にインストールしてください
+
+- [Python 3.8以上](https://www.python.org/downloads/)
+
+- [PyCryptodome](https://www.pycryptodome.org/)
+
+- [Git](https://git-scm.com/)
+
+  
+<br>
+
+### 2. リポジトリのクローン
+
+以下のコマンドをターミナルで実行します
+
+```bash
+git clone git@github.com:BackendExplorer/Online-Chat.git
+```
+```bash
+cd Online-Chat
+```
+
+<br>
+
+---
