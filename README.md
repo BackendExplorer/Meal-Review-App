@@ -151,4 +151,17 @@ cd Online-Chat
 
 <br>
 
+### 3. 仮想環境の有効化
+
+```bash
+# macOS/Linux
+source venv/bin/activate
+```
+
+```bash
+# Windows
+venv\Scripts\activate
+```
+
+
 ---
