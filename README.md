@@ -253,3 +253,31 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <br>
 
 ### 1. 技術選定の理由
+
+- **`Django`**
+
+  認証やDB操作が充実しており、効率的なWeb開発が可能なため。
+
+- **`venv`**
+
+  依存関係をプロジェクトごとに安全に管理できるため。
+ 
+- **`Tailwind`**
+
+  柔軟かつ効率的にUIをデザインできるため
+
+
+### 2.  技術スタックと 開発環境 の全体像
+
+<br>
+
+| カテゴリ         | 採用技術 と 使用ツール                                                                                               |
+|------------------|---------------------------------------------------------------------------------------------------------------------|
+| 開発言語         | ![Python](https://img.shields.io/badge/Python-3.x-blue) <br> DjangoフレームワークによるWebアプリ構築 |
+| フレームワーク   | ![Django](https://img.shields.io/badge/Framework-Django-green) <br> 管理機能・認証・ORMなどを包括的に提供 |
+| スタイリング     | ![Tailwind CSS](https://img.shields.io/badge/CSS-Tailwind_CSS-blue) <br> ウェブサイトの装飾に使用 |
+| 仮想環境         | ![venv](https://img.shields.io/badge/Env-venv-lightgrey) <br> 依存関係を安全に管理するためのPython標準仮想環境 |
+ |
+| 開発環境         | ![macOS](https://img.shields.io/badge/OS-macOS-lightgrey)&nbsp;&nbsp;&nbsp;&nbsp;![VSCode](https://img.shields.io/badge/Editor-VSCode-blue) |
+| バージョン管理   | ![Git](https://img.shields.io/badge/VersionControl-Git-orange)&nbsp;&nbsp;&nbsp;&nbsp;![GitHub](https://img.shields.io/badge/Repo-GitHub-black) |
+| ドキュメント・図 | ![Mermaid](https://img.shields.io/badge/Diagram-Mermaid-green) |
