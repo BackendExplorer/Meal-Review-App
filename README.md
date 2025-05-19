@@ -1,5 +1,5 @@
-<!-- 外側の div に直接スタイルを指定 -->
-<div class="mermaid" style="transform: scale(0.6); transform-origin: top left; width: 166.66%;">
+<!-- ← これを Markdown のコードブロック ```html ではなく、普通の HTML として書く -->
+<div class="mermaid" style="transform:scale(0.6);transform-origin:top left;width:166.66%;">
 sequenceDiagram
     participant User as ユーザ
     participant Server as サーバ（Django）
