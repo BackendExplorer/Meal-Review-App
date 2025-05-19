@@ -163,5 +163,16 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
+### 4. サーバの起動
+
+```bash
+cd Meal-Rating-App
+```
+
+```bash
+python3 manage.py runserver
+```
+
+
 
 ---
