@@ -351,7 +351,7 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 - [venv](https://docs.python.org/ja/3/library/venv.html)
 
-  `グローバル環境に影響を与えず、プロジェクト単位でライブラリの導入・管理を可能にするために参照`
+  グローバル環境に影響を与えず、プロジェクト単位でライブラリの導入・管理を可能にするために参照
 
 
 <br>
@@ -370,4 +370,3 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 </ul>
 
 <br>
-
