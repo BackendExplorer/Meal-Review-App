@@ -239,7 +239,9 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <br>
 
 ```mermaid
-%%{ init: { "theme": "default", "sequence": { "actorMargin": 100, "messageMargin": 50, "mirrorActors": false, "bottomMarginAdj": 2 } } }%%
+%%{ init: { "theme": "default", "themeVariables": {}, "sequence": { "actorMargin": 100, "messageMargin": 50, "mirrorActors": false, "bottomMarginAdj": 2 }, "scale": 0.8 } }%%
+
+
 
 sequenceDiagram
     participant User as ユーザ
