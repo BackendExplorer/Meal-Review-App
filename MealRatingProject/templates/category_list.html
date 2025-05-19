@@ -10,70 +10,116 @@
 
 <!-- 共通ヘッダー・ナビゲーション -->
 <header class="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-md w-full sticky top-0 z-50">
-    <nav class="flex justify-center w-full">
-      <div class="flex flex-wrap justify-center space-x-4 px-4 py-4">
+  <nav class="flex justify-between items-center w-full px-4 py-4">
+    <!-- ▼ 左側：各ページへのリンク -->
+    <div class="flex flex-wrap justify-center space-x-4">
+      <!-- Home -->
+      <a
+        href="{% url 'landing' %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Home
+      </a>
+
+      <!-- Morning Meals -->
+      <a
+        href="{% url 'category_list' 1 %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Morning Meals
+      </a>
+
+      <!-- Afternoon Meals -->
+      <a
+        href="{% url 'category_list' 2 %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Afternoon Meals
+      </a>
+
+      <!-- Evening Meals -->
+      <a
+        href="{% url 'category_list' 3 %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Evening Meals
+      </a>
+
+      <!-- Recently Rated -->
+      <a
+        href="{% url 'category_list' 4 %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Recently Rated
+      </a>
+
+      <!-- Top Rated -->
+      <a
+        href="{% url 'category_list' 5 %}"
+        class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+               border border-blue-400/70 text-white bg-blue-600
+               hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
+               focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+      >
+        Top Rated
+      </a>
+    </div>
+
+    <!-- ▼ 右側：認証ボタン -->
+    <div class="flex items-center space-x-4">
+      {% if user.is_authenticated %}
+        <form method="post" action="{% url 'accounts:logout' %}">
+          {% csrf_token %}
+          <button
+            type="submit"
+            class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
+                   border border-blue-400/70 text-white bg-red-600
+                   hover:bg-red-500 hover:border-red-300 hover:-translate-y-1 hover:shadow-2xl
+                   focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-opacity-50"
+          >
+            Logout
+          </button>
+        </form>
+      {% else %}
         <a
-          href="{% url 'landing' %}"
+          href="{% url 'accounts:login' %}"
           class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
                  border border-blue-400/70 text-white bg-blue-600
                  hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
                  focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
         >
-          Home
+          Login
         </a>
-  
         <a
-          href="{% url 'category_list' 1 %}"
+          href="{% url 'accounts:signup' %}"
           class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
-                 border border-blue-400/70 text-white bg-blue-600
-                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
+                 border border-green-400/70 text-white bg-green-600
+                 hover:bg-green-500 hover:border-green-300 hover:-translate-y-1 hover:shadow-2xl
+                 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-50"
         >
-          Morning Meals
+          Sign&nbsp;Up
         </a>
-  
-        <a
-          href="{% url 'category_list' 2 %}"
-          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
-                 border border-blue-400/70 text-white bg-blue-600
-                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-        >
-          Afternoon Meals
-        </a>
-  
-        <a
-          href="{% url 'category_list' 3 %}"
-          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
-                 border border-blue-400/70 text-white bg-blue-600
-                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-        >
-          Evening Meals
-        </a>
-  
-        <a
-          href="{% url 'category_list' 4 %}"
-          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
-                 border border-blue-400/70 text-white bg-blue-600
-                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-        >
-          Recently Rated
-        </a>
-  
-        <a
-          href="{% url 'category_list' 5 %}"
-          class="relative inline-block px-5 py-2 font-semibold tracking-wide transition transform duration-200 rounded-full
-                 border border-blue-400/70 text-white bg-blue-600
-                 hover:bg-blue-500 hover:border-blue-300 hover:-translate-y-1 hover:shadow-2xl
-                 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-        >
-          Top Rated
-        </a>
-      </div>
-    </nav>
-  </header>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+
+
         
 <main class="container mx-auto py-8">
   <!-- ページタイトル -->

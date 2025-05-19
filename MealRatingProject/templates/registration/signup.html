@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サインアップ | Meal List</title>
+    <!-- Tailwind CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+<main class="container mx-auto py-16 px-4 max-w-md">
+  <h1 class="text-3xl font-extrabold text-center text-green-700 mb-8 drop-shadow-md">サインアップ</h1>
+<form method="post" class="space-y-6 bg-white rounded-2xl shadow-xl p-8 border border-green-100">
+  {% csrf_token %}
+
+  <!-- ユーザー名 -->
+  <div>
+    <label for="id_username" class="block text-lg font-bold text-gray-800 mb-1">Username:</label>
+    <input
+      type="text"
+      name="username"
+      id="id_username"
+      required
+      class="block w-full rounded-lg border-2 border-gray-200 p-3 mb-1 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition"
+      value="{{ form.username.value|default_if_none:'' }}"
+      autocomplete="username"
+    >
+    {% if form.username.errors %}
+      <p class="text-sm text-red-500 mt-1">{{ form.username.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <!-- メールアドレス（任意） -->
+  {% if form.email %}
+  <div>
+    <label for="id_email" class="block text-lg font-bold text-gray-800 mb-1">メールアドレス:</label>
+    <input
+      type="email"
+      name="email"
+      id="id_email"
+      required
+      class="block w-full rounded-lg border-2 border-gray-200 p-3 mb-1 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition"
+      value="{{ form.email.value|default_if_none:'' }}"
+      autocomplete="email"
+    >
+    {% if form.email.errors %}
+      <p class="text-sm text-red-500 mt-1">{{ form.email.errors.0 }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- パスワード -->
+  <div>
+    <label for="id_password1" class="block text-lg font-bold text-gray-800 mb-1">Password:</label>
+    <input
+      type="password"
+      name="password1"
+      id="id_password1"
+      required
+      class="block w-full rounded-lg border-2 border-gray-200 p-3 mb-1 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition"
+      autocomplete="new-password"
+    >
+    {% if form.password1.errors %}
+      <p class="text-sm text-red-500 mt-1">{{ form.password1.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <!-- パスワード（確認用） -->
+  <div>
+    <label for="id_password2" class="block text-lg font-bold text-gray-800 mb-1">Password confirmation:</label>
+    <input
+      type="password"
+      name="password2"
+      id="id_password2"
+      required
+      class="block w-full rounded-lg border-2 border-gray-200 p-3 mb-1 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition"
+      autocomplete="new-password"
+    >
+    {% if form.password2.errors %}
+      <p class="text-sm text-red-500 mt-1">{{ form.password2.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <button type="submit"
+    class="w-full py-3 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl
+           hover:from-green-700 hover:to-green-800 hover:shadow-lg transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-50">
+    登録してログイン
+  </button>
+</form>
+
+  <p class="mt-6 text-center text-gray-700">
+    既に登録済みの方は
+    <a href="{% url 'accounts:login' %}" class="text-blue-600 font-bold underline hover:text-blue-800">ログインへ</a>
+  </p>
+</main>
+</body>
+</html>

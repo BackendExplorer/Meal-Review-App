@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン | Meal List</title>
+    <!-- Tailwind CSS 読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+<main class="container mx-auto py-16 px-4 max-w-md">
+  <h1 class="text-3xl font-extrabold text-center text-blue-700 mb-8 drop-shadow-md">ログイン</h1>
+  <form method="post" class="space-y-6 bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+    {% csrf_token %}
+
+    <!-- ユーザー名 -->
+    <div>
+      <label for="id_username" class="block text-lg font-semibold text-gray-700 mb-1">Username:</label>
+      <input
+        type="text"
+        name="username"
+        id="id_username"
+        required
+        class="block w-full rounded-lg border-2 border-gray-200 p-3 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
+        value="{{ form.username.value|default_if_none:'' }}"
+        autocomplete="username"
+      >
+      {% if form.username.errors %}
+        <p class="text-sm text-red-500 mt-1">{{ form.username.errors.0 }}</p>
+      {% endif %}
+    </div>
+
+    <!-- パスワード -->
+    <div>
+      <label for="id_password" class="block text-lg font-semibold text-gray-700 mb-1">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="id_password"
+        required
+        class="block w-full rounded-lg border-2 border-gray-200 p-3 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
+        autocomplete="current-password"
+      >
+      {% if form.password.errors %}
+        <p class="text-sm text-red-500 mt-1">{{ form.password.errors.0 }}</p>
+      {% endif %}
+    </div>
+
+    <button type="submit"
+      class="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl
+             hover:from-blue-700 hover:to-blue-800 hover:shadow-lg transition-all duration-150
+             focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">
+      ログイン
+    </button>
+  </form>
+  <p class="mt-6 text-center text-gray-700">
+    アカウントが無い場合は
+    <a href="{% url 'accounts:signup' %}" class="text-blue-600 font-bold underline hover:text-blue-800">こちらで作成</a>
+  </p>
+</main>
+</body>
+</html>

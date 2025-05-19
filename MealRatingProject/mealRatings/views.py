@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Meal, MealRating
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def add_meal(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -24,7 +26,7 @@ def add_meal(request):
     # POST以外の場合もランディングページにリダイレクト
     return redirect('landing')
 
-
+@login_required
 def landing_page(request):
     # まず全てのMealを取得
     all_meals = Meal.objects.all()
@@ -49,7 +51,7 @@ def landing_page(request):
     }
     return render(request, 'landing.html', context)
 
-
+@login_required
 def category_list(request, meal_time):
     # meal_time の値に応じたフィルタリング
     if meal_time == 4:  # Recently Added：現在から 90 日以内
@@ -85,13 +87,13 @@ def category_list(request, meal_time):
     context = {'meals': meals, 'category_name': category_names.get(meal_time, '')}
     return render(request, 'category_list.html', context)
 
-
+@login_required
 def meal_detail(request, meal_id):
     meal = get_object_or_404(Meal, pk=meal_id)
     context = {'meal': meal}
     return render(request, 'meal_detail.html', context)
 
-
+@login_required
 def rate_meal(request, meal_id):
     meal = get_object_or_404(Meal, pk=meal_id)
     if request.method == 'POST':
