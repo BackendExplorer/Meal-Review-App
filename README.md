@@ -131,7 +131,7 @@ https://github.com/user-attachments/assets/f9f4e9d2-5579-40e8-b307-a562745fbbd4
 
 - [Python 3.8以上](https://www.python.org/downloads/)
 
-- [PyCryptodome](https://www.pycryptodome.org/)
+- [venv]( https://docs.python.org/ja/3/library/venv.html)
 
 - [Git](https://git-scm.com/)
 
