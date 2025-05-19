@@ -2,12 +2,20 @@
 
 ![Django](https://img.shields.io/badge/Framework-Django-green)
 
+<br>
 
-**食事レビュー＆評価アプリ | ログイン・投稿・評価付き！**
+### Djangoで構築された、食事を記録・共有・評価できるレビューアプリ
+### 写真投稿、コメント、星評価機能で、日常の食事体験をシェアしよう！
 
+<br>
 
-## ⭐ デモ
+## ⭐ デモ動画
 
+<br>
+
+### ログインして、食事のレビューを投稿する流れを確認できるデモ動画
+
+<br>
 
 <img width="1440" alt="スクリーンショット 2025-04-15 0 59 56" src="https://github.com/user-attachments/assets/7a447383-aab3-4176-ac24-795f4e169f9d" />
 
