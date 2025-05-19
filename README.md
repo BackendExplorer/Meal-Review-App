@@ -242,4 +242,14 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 <br>
 
-<img width="791" alt="スクリーンショット 2025-05-20 6 22 54" src="https://github.com/user-attachments/assets/4d0ddfb4-2d8a-48d5-a77c-dc6c96c509b5" />
+<img width="789" alt="スクリーンショット 2025-05-20 6 24 50" src="https://github.com/user-attachments/assets/b4cbd76e-28b8-4df4-b16b-1e7b20603b6a" />
+
+<br>
+
+---
+
+## <a id="使用技術"></a>🧰 使用技術
+
+<br>
+
+### 1. 技術選定の理由
