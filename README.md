@@ -316,7 +316,7 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <ul>
   <li>
     <h3>Djangoのリレーションモデルにおける集計処理</h3>
-    <p>MealRating を Meal に紐づけて集計する処理（評価件数や平均点）に慣れるまで時間がかかりました。特にテンプレートでの表示ロジックとの連携に工夫を要しました。</p>
+    <p>MealRating を Meal に紐づけて集計する処理（評価件数や平均点）に慣れるまで時間がかかりました。<br>特にテンプレートでの表示ロジックとの連携に工夫を要しました。</p>
   </li>
 </ul>
 
@@ -325,7 +325,7 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <ul>
   <li>
     <h3>UIと機能性のバランス調整</h3>
-    <p>情報量が多くなりがちな食事レビューを、視覚的にわかりやすく・直感的に評価できるようにするUI設計に試行錯誤しました。</p>
+    <p>情報量が多くなりがちな食事レビューを、視覚的にわかりやすく・直感的に<br>評価できるようにするUI設計に試行錯誤しました。</p>
   </li>
 </ul>
 
@@ -358,11 +358,11 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 - [Python](https://docs.python.org/ja/3/)
 
-  `Python`の基本文法を参照
+  Pythonコードの基本的な書き方を参照
 
 - [Django](https://docs.djangoproject.com/ja/stable/)
 
-  `フレームワーク`としての使い方を参照
+  ウェブサイトを作るためのフレームワークとしての使い方を参照
 
 - [venv](https://docs.python.org/ja/3/library/venv.html)
 
