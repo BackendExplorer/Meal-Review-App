@@ -244,6 +244,11 @@ sequenceDiagram
     participant Server as サーバ（Django）
     participant DB as データベース（SQLite）
 
+    User->>Server: ログイン要求
+    Server->>DB: ユーザ認証情報の照会
+    DB-->>Server: 認証情報の確認
+    Server-->>User: ログイン結果を返却
+
     User->>Server: ページにアクセス（例：/meals）
     Server->>DB: 食事データの取得クエリ
     DB-->>Server: 食事データを返却
@@ -253,10 +258,5 @@ sequenceDiagram
     Server->>DB: 評価データを保存
     DB-->>Server: 保存結果を返却
     Server-->>User: 評価完了メッセージを返却
-
-    User->>Server: ログイン要求
-    Server->>DB: ユーザ認証情報の照会
-    DB-->>Server: 認証情報の確認
-    Server-->>User: ログイン結果を返却
 
 ```
