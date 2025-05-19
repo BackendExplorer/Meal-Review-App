@@ -232,11 +232,31 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 <br>
 
+---
 
+## <a id="システム全体の構成図"></a>⚙️ システム全体の構成図
 
+<br>
 
+```mermaid
+sequenceDiagram
+    participant User as ユーザ
+    participant Server as サーバ（Django）
+    participant DB as データベース（SQLite）
 
+    User->>Server: ページにアクセス（例：/meals）
+    Server->>DB: 食事データの取得クエリ
+    DB-->>Server: 食事データを返却
+    Server-->>User: 食事一覧を表示
 
+    User->>Server: 評価を送信（例：POST /rate）
+    Server->>DB: 評価データを保存
+    DB-->>Server: 保存結果を返却
+    Server-->>User: 評価完了メッセージを返却
 
+    User->>Server: ログイン要求
+    Server->>DB: ユーザ認証情報の照会
+    DB-->>Server: 認証情報の確認
+    Server-->>User: ログイン結果を返却
 
-
+```
