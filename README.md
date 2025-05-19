@@ -1,9 +1,12 @@
-# 🧑‍🍳 Meal-Rating-Site ⭐  
+# Meal-Rating-Site 
+
+![Django](https://img.shields.io/badge/Framework-Django-green)
+
 
 **食事レビュー＆評価アプリ | ログイン・投稿・評価付き！**
 
 
-## 🖥 デモ
+## ⭐ デモ
 
 
 <img width="1440" alt="スクリーンショット 2025-04-15 0 59 56" src="https://github.com/user-attachments/assets/7a447383-aab3-4176-ac24-795f4e169f9d" />
