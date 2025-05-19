@@ -316,7 +316,8 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 <ul>
   <li>
     <h3>Djangoのリレーションモデルにおける集計処理</h3>
-    <p>MealRating を Meal に紐づけて集計する処理（評価件数や平均点）に慣れるまで時間がかかりました。<br>特にテンプレートでの表示ロジックとの連携に工夫を要しました。</p>
+    <p>MealRating を Meal に紐づけて集計する処理（評価件数や平均点）に慣れるまで時間がかかりました。</p>
+    <p>特にテンプレートでの表示ロジックとの連携に工夫を要しました。</p>
   </li>
 </ul>
 
