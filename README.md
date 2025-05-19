@@ -300,6 +300,8 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 - Djangoの各アプリ（例：reviews、accounts）を機能ごとに分割し、拡張しやすい設計にしました
 
 
+<br>
+
 ---
 ## <a id="苦労した点"></a> ⚠️ 苦労した点
 
@@ -309,8 +311,10 @@ https://github.com/user-attachments/assets/fa5dfadc-49b3-4cd0-826e-84c45db6ad1e
 
 - MealRating を Meal に紐づけて集計する処理（評価件数や平均点）に慣れるまで時間がかかりました。特にテンプレートでの表示ロジックとの連携に工夫を要しました。
 
+<br>
 
 ### UIと機能性のバランス調整
 
 - 情報量が多くなりがちな食事レビューを、視覚的にわかりやすく・直感的に評価できるようにするUI設計に試行錯誤しました。
 
+<br>
