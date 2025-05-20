@@ -151,7 +151,7 @@ cd Online-Chat
 
 <br>
 
-### 3. 仮想環境の有効化
+### 3. 仮想環境の起動
 
 ```bash
 # macOS/Linux の場合
