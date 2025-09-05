@@ -201,8 +201,10 @@ python3 manage.py runserver
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/581f936f-70e1-433f-b8cc-b34aad77120b" width="100%" alt="サインアップフォーム" /></td>
-    <td><img src="https://github.com/user-attachments/assets/66f40d21-972a-44d5-899c-f1d119341a9c" width="100%" alt="ログインフォーム" /></td>
+    <td><img width="533" height="427" alt="Image" src="https://github.com/user-attachments/assets/dc9ec02c-db7e-4115-ba2a-b255186cb9ee" />
+</td>
+    <td><img width="533" height="398" alt="Image" src="https://github.com/user-attachments/assets/67b689af-3685-4ec9-bf9d-63305ca7714f" />
+</td>
   </tr>
 </table>
 
