@@ -245,7 +245,7 @@ python3 manage.py runserver
 
 <br>
 
-<img width="789" alt="スクリーンショット 2025-05-20 6 24 50" src="https://github.com/user-attachments/assets/b4cbd76e-28b8-4df4-b16b-1e7b20603b6a" />
+<img width="532" height="390" alt="Image" src="https://github.com/user-attachments/assets/1faf76bf-30de-4c33-8d8b-07c9fc8c6c14" />
 
 <br>
 
